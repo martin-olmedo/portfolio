@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Martín Olmedo - Portafolio</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/plasticine/100/000000/manager.png">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"> ESTO ES PARA APLICAR MEDIA QUEERI COMO UNA HOJA NUEVA. TAMBIEN SE PUEDE PONER EN STYLES.CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- LA PROXIMA ETIQUETA ES PARA HACERLO RESPONSIVE (QUE SE VEA BIEN EN DISTINTOS DISPOSITIVOS) -->
+    <!-- PARA CAMBIAR LA ESCALA INCIAL (EL ZOOM INICIAL) ES initial-scale=1 PARA EL 100% (por ej en ipad pro no veía el 100% del ancho cuando cargaba-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- con la etiqueta con el atributo target como este <a href="youtube.com/algo" target="_blank">Video de youtube</a> se abre una pestaña nueva para mostrar lo que yo quiero -->
+    <header class="header">
+        <div>
+            <figure class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="imagen logo" height="50px" style="vertical-align: middle"></a>
+            </figure>
+            <nav class="menu">
+                <ol>
+                    <li>
+                        <a class="link" href="#portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#contacto">Trabajemos juntos</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Hola! Soy <strong>Martin Olmedo</strong>,<br/>desarrollador <strong>JavaScript</strong> con <br>pasión por el <strong>aprendizaje</strong></h1>
+        <img src="images/tildeverdeSAP.png" alt="imágen de portada" width="200px">
+    </section>
+    <section id="portafolio" class="portfolio">
+        <h2>Portafolio (proyectos destacados)</h2>
+        <article class="project">
+            <div class="project-textContainer">
+                <h3 class="project-title">Simón Dice</h3>
+                <h6 class="project-course">Juegos con JavaScript</h6>
+                <p class="project-date"><small><strong>Fecha: 15/10/2019</strong></small></p>
+                <p class="project-url"><small><strong>Podes verlo en</strong> <a class="link1" href="https://martin-olmedo.github.io/Simon_Dice/" target="_blank">Simón Dice!</a></small></p>
+                <p class="project-description">Simón Dice fue el resultado de varios días de trabajo gracias a un curso de programación donde incluye cuestiones tanto front end como back end.</p>
+            </div>
+            <figure class="project-imageContainer">
+                <img class="project-image" src="" alt="imagen de Simon Dice">
+            </figure>
+        </article>
+        <article class="project">
+            <div class="project-textContainer">
+                <h3 class="project-title">Negocio on-line (página web de prueba)</h3>
+                <h6 class="project-course">Página web integrada con Paypal</h6>
+                <p class="project-date"><small><strong>Fecha: 20/10/2019</strong></small></p>
+                <p class="project-url"><small><strong>Podes verlo en</strong> <a class="link1" href="https://martin-olmedo.github.io/Producto_digital/" target="_blank">Producto Digital</a></small></p>
+                <p class="project-description">Este es un producto digital donde vinculo distintas partes de una página web, incluído un botón para hacer pagos con Paypal.</p>
+            </div>
+            <figure class="project-imageContainer">
+                <img class="project-image" src="" alt="imagen de Producto Digital">
+            </figure>
+        </article>
+    </section>
+    <h2 class="experience-list-title">Más sobre mi experiencia</h2>
+    <section id="experiencia" class="experience-list">
+        <article class="experience">
+            <figure class="experience-imageContainer">
+                <img src="" alt="imágen del evento" class="experience-image">
+            </figure>
+            <div class="experience-details">
+                <h3 class="experience-title">UI Path 2019</h3>
+                <p class="experience-description">Aprendiendo a automatizar con UI Path, con las guías y prácticas que incluye la web.</p>
+                <a class="experience-url" href="https://www.uipath.com/es/" target="_blank">Visitar página</a>
+            </div>
+        </article>
+        <article class="experience">
+            <figure class="experience-imageContainer">
+                <img src="" alt="imágen del evento" class="experience-image">
+            </figure>
+            <div class="experience-details">
+                <h3 class="experience-title">UTest</h3>
+                <p class="experience-description">Experiencia como tester freelance a través de la web uTest.</p>
+                <a class="experience-url" href="http://www.utest.com" target="_blank">Visitar página</a>
+            </div>
+        </article>
+    </section>
+    <section id="contacto" class="contact">
+        <form action="mailto:martinjolmedo@gmail.com" class="form-email">
+            <h3>Dejame tu email para contacto:</h3>
+            <input type="text" name="" id="email" placeholder="Dejame tu email" value="@gmail.com">
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="social">
+            <a class="social-link-linkedin" href="https://www.linkedin.com/in/martin-olmedo-05474748/" target="_blank"></a>
+            <a class="social-link-facebook" href="http://www.facebook.com/martin.olmedo.9085" target="_blank"></a>
+            <a class="social-link-instagram" href="http://www.instagram.com/martinolme" target="_blank"></a>
+            <a class="social-link-github" href="https://github.com/martin-olmedo" target="_blank"></a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div>
+            <p>Hecho con el Curso de desarrollo web online de <a href="http://www.platzi.com"><img src="https://cdnwp.runahr.com/wp-content/uploads/2018/09/logo_gris.png" alt="logo_platzi" height="20px"></a></p>
+        </div>
+        <!-- <div> <p>Designed by <a href="http://twitter.com/thespianartist">@thespianartist</a></p>  </div> -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* si le pongo !important a algún estilo, se va a quedar y no se va a modificar con otros comandos de estilo que haga en HTML */
+/* Los colores en hexadecimal son #FFFFFF donde los primeros dos son el valor de rojo, los segundos dos de verde y los últimos dos de azul */
+/* selector de etiqueta: */
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+h1 {
+    color: whitesmoke;
+    line-height: 1.5em;
+    font-size: 40px;
+    letter-spacing: -.2px;
+    margin: 0;
+    /* arriba derecha abajo izq */
+}
+h1 strong {
+    color: royalblue;
+}
+h2{
+    color: royalblue;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+/* selector descendente: */
+body header div nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+body header div nav ol li {
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type: none;
+}
+/* selector de clase: */
+.link {
+    text-decoration: none;
+    color: white;
+}
+.link1 {
+    text-decoration: none;
+    color: black;
+}
+.link:hover{
+    color: aquamarine;
+}
+.link1:hover{
+    color: aquamarine;
+}
+/* EL BORDE (LA CAJITA DIBUJADA) NOS DICE SI USAMOS MARGIN O PADDING. MARGIN MUEVE LA CAJA, PADDING EL CONTENIDO  */
+.portfolio {
+    background-color: #FAFAFA;
+    padding: 20px;
+
+}
+.project{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+    /* margin: 10px; */
+    margin-bottom: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-textContainer{
+    width: 500px;
+    /* margin: 10px auto; auto sirve para centrar las cosas, porque abarca el máximo que puede de cada lado*/
+    /* arriba abajo - derecha izq */
+}
+.project-title{
+    font-size: 30px;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.project-course, .project-url, .project-date {
+    margin: 10px 0;
+}
+.project-description {
+    font-size: 20px;
+}
+.project strong {
+    font-family: 'Fjalla One', sans-serif;
+}
+.project-imageContainer{
+    width: 500px;
+}
+.hero{
+    height: 200px;
+    /* background-image: url(../images/tildeverdeSAP.png); */
+    /* background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center; */
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+.header{
+    background-color: #1b2127;
+    color: white;
+    height: 70px;
+}
+body header div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body header div figure img {
+    vertical-align: middle;
+}
+.footer {
+    background-color: #202031;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.footer img{
+    vertical-align: middle;
+}
+.footer a{
+    color: white;
+}
+.footer a:hover{
+    color: aquamarine;  
+}
+/* selector de id */
+#portafolio {
+
+}
+.experience-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* TENGO QUE PONERLE ESTAS TRES PARA QUE QUEDE PROLIJO Y SE MUEVA SEGÚN EL TAMAÑO DE LA VENTANA */
+}
+.experience-list-title {
+    margin-left: 20px;
+}
+.experience {
+    /* border: 1px solid red; */
+    margin: 10px;
+    width: 480px;
+    border-radius: 4px;
+    overflow: hidden;
+    /* CON OVERFLOW, TODO LO QUE SALE DEL LUGAR SE ESCONDE */
+    flex-shrink: 0; /*para que no se achiquen y mantengan el tamaño que le asigné */
+    background-color: #f4fbff;
+}
+.experience-details {
+    margin: 20px 40px;
+    background-color: white;
+    margin-top: -40px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+.experience-description {
+    text-align: left;
+}
+.experience-url {
+    color: royalblue;
+    border: 1px solid; /*SI TENGO EL COLOR DECLARADO ANTES QUE EL BORDE, EL BORDE TOMA ESE COLOR*/
+    padding: 5px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+}
+.experience-image {
+    width: inherit;
+    object-fit: cover;
+    /* CON ESTO LA IMÁGEN MANTIENE LAS PROPORCIONES PERO LO QUE SALDRÍA AFIERA DE DONDE TIENE QUE ESTAR, DESAPARECE */
+
+}
+.experience-imageContainer {
+    width: inherit;
+}
+.contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+.social {
+
+}
+.social-link-linkedin, .social-link-facebook, .social-link-instagram, .social-link-github {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid red; */
+    object-fit: cover;
+    border-radius: 10px;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+.social-link-linkedin {
+    background-image: url('https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico');
+}
+.social-link-facebook {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRv%0D%0AcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVy%0D%0Ac2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RU%0D%0ARCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2%0D%0AZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4%0D%0AbGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2Fw%0D%0AYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94%0D%0APSIwIDAgOTAgOTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDkwIDkwOyIgeG1s%0D%0AOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IkZhY2Vib29rX194MjhfYWx0X3gyOV8i%0D%0AIGQ9Ik05MCwxNS4wMDFDOTAsNy4xMTksODIuODg0LDAsNzUsMEgxNUM3LjExNiwwLDAsNy4xMTks%0D%0AMCwxNS4wMDF2NTkuOTk4ICAgQzAsODIuODgxLDcuMTE2LDkwLDE1LjAwMSw5MEg0NVY1NkgzNFY0%0D%0AMWgxMXYtNS44NDRDNDUsMjUuMDc3LDUyLjU2OCwxNiw2MS44NzUsMTZINzR2MTVINjEuODc1QzYw%0D%0ALjU0OCwzMSw1OSwzMi42MTEsNTksMzUuMDI0VjQxICAgaDE1djE1SDU5djM0aDE2YzcuODg0LDAs%0D%0AMTUtNy4xMTksMTUtMTUuMDAxVjE1LjAwMXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9n%0D%0APgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8%0D%0AZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4K%0D%0APC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+}
+.social-link-instagram {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRv%0D%0AcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVy%0D%0Ac2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIw%0D%0AMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lv%0D%0Abj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIi%0D%0AIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InBy%0D%0AZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9%0D%0AIk0zNTIsMEgxNjBDNzEuNjQ4LDAsMCw3MS42NDgsMCwxNjB2MTkyYzAsODguMzUyLDcxLjY0OCwx%0D%0ANjAsMTYwLDE2MGgxOTJjODguMzUyLDAsMTYwLTcxLjY0OCwxNjAtMTYwVjE2MCAgICBDNTEyLDcx%0D%0ALjY0OCw0NDAuMzUyLDAsMzUyLDB6IE00NjQsMzUyYzAsNjEuNzYtNTAuMjQsMTEyLTExMiwxMTJI%0D%0AMTYwYy02MS43NiwwLTExMi01MC4yNC0xMTItMTEyVjE2MEM0OCw5OC4yNCw5OC4yNCw0OCwxNjAs%0D%0ANDggICAgaDE5MmM2MS43NiwwLDExMiw1MC4yNCwxMTIsMTEyVjM1MnoiIGZpbGw9IiNGRkZGRkYi%0D%0ALz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNTYsMTI4Yy03MC42ODgsMC0xMjgs%0D%0ANTcuMzEyLTEyOCwxMjhzNTcuMzEyLDEyOCwxMjgsMTI4czEyOC01Ny4zMTIsMTI4LTEyOFMzMjYu%0D%0ANjg4LDEyOCwyNTYsMTI4eiBNMjU2LDMzNiAgICBjLTQ0LjA5NiwwLTgwLTM1LjkwNC04MC04MGMw%0D%0ALTQ0LjEyOCwzNS45MDQtODAsODAtODBzODAsMzUuODcyLDgwLDgwQzMzNiwzMDAuMDk2LDMwMC4w%0D%0AOTYsMzM2LDI1NiwzMzZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8%0D%0AY2lyY2xlIGN4PSIzOTMuNiIgY3k9IjExOC40IiByPSIxNy4wNTYiIGZpbGw9IiNGRkZGRkYiLz4K%0D%0ACTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8%0D%0AZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4K%0D%0APC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+}
+.social-link-github {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRv%0D%0AcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVy%0D%0Ac2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RU%0D%0ARCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2%0D%0AZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4%0D%0AbGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2Fw%0D%0AYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94%0D%0APSIwIDAgNDM4LjU0OSA0MzguNTQ5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0%0D%0AMzguNTQ5IDQzOC41NDk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDA5%0D%0ALjEzMiwxMTQuNTczYy0xOS42MDgtMzMuNTk2LTQ2LjIwNS02MC4xOTQtNzkuNzk4LTc5LjhDMjk1%0D%0ALjczNiwxNS4xNjYsMjU5LjA1Nyw1LjM2NSwyMTkuMjcxLDUuMzY1ICAgYy0zOS43ODEsMC03Ni40%0D%0ANzIsOS44MDQtMTEwLjA2MywyOS40MDhjLTMzLjU5NiwxOS42MDUtNjAuMTkyLDQ2LjIwNC03OS44%0D%0ALDc5LjhDOS44MDMsMTQ4LjE2OCwwLDE4NC44NTQsMCwyMjQuNjMgICBjMCw0Ny43OCwxMy45NCw5%0D%0AMC43NDUsNDEuODI3LDEyOC45MDZjMjcuODg0LDM4LjE2NCw2My45MDYsNjQuNTcyLDEwOC4wNjMs%0D%0ANzkuMjI3YzUuMTQsMC45NTQsOC45NDUsMC4yODMsMTEuNDE5LTEuOTk2ICAgYzIuNDc1LTIuMjgy%0D%0ALDMuNzExLTUuMTQsMy43MTEtOC41NjJjMC0wLjU3MS0wLjA0OS01LjcwOC0wLjE0NC0xNS40MTdj%0D%0ALTAuMDk4LTkuNzA5LTAuMTQ0LTE4LjE3OS0wLjE0NC0yNS40MDZsLTYuNTY3LDEuMTM2ICAgYy00%0D%0ALjE4NywwLjc2Ny05LjQ2OSwxLjA5Mi0xNS44NDYsMWMtNi4zNzQtMC4wODktMTIuOTkxLTAuNzU3%0D%0ALTE5Ljg0Mi0xLjk5OWMtNi44NTQtMS4yMzEtMTMuMjI5LTQuMDg2LTE5LjEzLTguNTU5ICAgYy01%0D%0ALjg5OC00LjQ3My0xMC4wODUtMTAuMzI4LTEyLjU2LTE3LjU1NmwtMi44NTUtNi41N2MtMS45MDMt%0D%0ANC4zNzQtNC44OTktOS4yMzMtOC45OTItMTQuNTU5ICAgYy00LjA5My01LjMzMS04LjIzMi04Ljk0%0D%0ANS0xMi40MTktMTAuODQ4bC0xLjk5OS0xLjQzMWMtMS4zMzItMC45NTEtMi41NjgtMi4wOTgtMy43%0D%0AMTEtMy40MjljLTEuMTQyLTEuMzMxLTEuOTk3LTIuNjYzLTIuNTY4LTMuOTk3ICAgYy0wLjU3Mi0x%0D%0ALjMzNS0wLjA5OC0yLjQzLDEuNDI3LTMuMjg5YzEuNTI1LTAuODU5LDQuMjgxLTEuMjc2LDguMjgt%0D%0AMS4yNzZsNS43MDgsMC44NTNjMy44MDcsMC43NjMsOC41MTYsMy4wNDIsMTQuMTMzLDYuODUxICAg%0D%0AYzUuNjE0LDMuODA2LDEwLjIyOSw4Ljc1NCwxMy44NDYsMTQuODQyYzQuMzgsNy44MDYsOS42NTcs%0D%0AMTMuNzU0LDE1Ljg0NiwxNy44NDdjNi4xODQsNC4wOTMsMTIuNDE5LDYuMTM2LDE4LjY5OSw2LjEz%0D%0ANiAgIGM2LjI4LDAsMTEuNzA0LTAuNDc2LDE2LjI3NC0xLjQyM2M0LjU2NS0wLjk1Miw4Ljg0OC0y%0D%0ALjM4MywxMi44NDctNC4yODVjMS43MTMtMTIuNzU4LDYuMzc3LTIyLjU1OSwxMy45ODgtMjkuNDEg%0D%0AICBjLTEwLjg0OC0xLjE0LTIwLjYwMS0yLjg1Ny0yOS4yNjQtNS4xNGMtOC42NTgtMi4yODYtMTcu%0D%0ANjA1LTUuOTk2LTI2LjgzNS0xMS4xNGMtOS4yMzUtNS4xMzctMTYuODk2LTExLjUxNi0yMi45ODUt%0D%0AMTkuMTI2ICAgYy02LjA5LTcuNjE0LTExLjA4OC0xNy42MS0xNC45ODctMjkuOTc5Yy0zLjkwMS0x%0D%0AMi4zNzQtNS44NTItMjYuNjQ4LTUuODUyLTQyLjgyNmMwLTIzLjAzNSw3LjUyLTQyLjYzNywyMi41%0D%0ANTctNTguODE3ICAgYy03LjA0NC0xNy4zMTgtNi4zNzktMzYuNzMyLDEuOTk3LTU4LjI0YzUuNTIt%0D%0AMS43MTUsMTMuNzA2LTAuNDI4LDI0LjU1NCwzLjg1M2MxMC44NSw0LjI4MywxOC43OTQsNy45NTIs%0D%0AMjMuODQsMTAuOTk0ICAgYzUuMDQ2LDMuMDQxLDkuMDg5LDUuNjE4LDEyLjEzNSw3LjcwOGMxNy43%0D%0AMDUtNC45NDcsMzUuOTc2LTcuNDIxLDU0LjgxOC03LjQyMXMzNy4xMTcsMi40NzQsNTQuODIzLDcu%0D%0ANDIxbDEwLjg0OS02Ljg0OSAgIGM3LjQxOS00LjU3LDE2LjE4LTguNzU4LDI2LjI2Mi0xMi41NjVj%0D%0AMTAuMDg4LTMuODA1LDE3LjgwMi00Ljg1MywyMy4xMzQtMy4xMzhjOC41NjIsMjEuNTA5LDkuMzI1%0D%0ALDQwLjkyMiwyLjI3OSw1OC4yNCAgIGMxNS4wMzYsMTYuMTgsMjIuNTU5LDM1Ljc4NywyMi41NTks%0D%0ANTguODE3YzAsMTYuMTc4LTEuOTU4LDMwLjQ5Ny01Ljg1Myw0Mi45NjZjLTMuOSwxMi40NzEtOC45%0D%0ANDEsMjIuNDU3LTE1LjEyNSwyOS45NzkgICBjLTYuMTkxLDcuNTIxLTEzLjkwMSwxMy44NS0yMy4x%0D%0AMzEsMTguOTg2Yy05LjIzMiw1LjE0LTE4LjE4Miw4Ljg1LTI2Ljg0LDExLjEzNmMtOC42NjIsMi4y%0D%0AODYtMTguNDE1LDQuMDA0LTI5LjI2Myw1LjE0NiAgIGM5Ljg5NCw4LjU2MiwxNC44NDIsMjIuMDc3%0D%0ALDE0Ljg0Miw0MC41Mzl2NjAuMjM3YzAsMy40MjIsMS4xOSw2LjI3OSwzLjU3Miw4LjU2MmMyLjM3%0D%0AOSwyLjI3OSw2LjEzNiwyLjk1LDExLjI3NiwxLjk5NSAgIGM0NC4xNjMtMTQuNjUzLDgwLjE4NS00%0D%0AMS4wNjIsMTA4LjA2OC03OS4yMjZjMjcuODgtMzguMTYxLDQxLjgyNS04MS4xMjYsNDEuODI1LTEy%0D%0AOC45MDYgICBDNDM4LjUzNiwxODQuODUxLDQyOC43MjgsMTQ4LjE2OCw0MDkuMTMyLDExNC41NzN6%0D%0AIiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+Cjwv%0D%0AZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4K%0D%0APGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==');
+}
+.form-email input{
+    border-color: gray;
+    padding: 5px 20px 5px 25px;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRv%0D%0AcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVy%0D%0Ac2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4%0D%0AbWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTQgMTQi%0D%0AIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0IDE0OyIgeG1sOnNwYWNlPSJwcmVz%0D%0AZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik03LDlMNS4y%0D%0ANjgsNy40ODRsLTQuOTUyLDQuMjQ1QzAuNDk2LDExLjg5NiwwLjczOSwxMiwxLjAwNywxMmgxMS45%0D%0AODYKCQkJYzAuMjY3LDAsMC41MDktMC4xMDQsMC42ODgtMC4yNzFMOC43MzIsNy40ODRMNyw5eiIv%0D%0APgoJCTxwYXRoIHN0eWxlPSJmaWxsOiMwMzAxMDQ7IiBkPSJNMTMuNjg0LDIuMjcxQzEzLjUwNCwy%0D%0ALjEwMywxMy4yNjIsMiwxMi45OTMsMkgxLjAwN0MwLjc0LDIsMC40OTgsMi4xMDQsMC4zMTgsMi4y%0D%0ANzNMNyw4CgkJCUwxMy42ODQsMi4yNzF6Ii8+CgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAzMDEw%0D%0ANDsiIHBvaW50cz0iMCwyLjg3OCAwLDExLjE4NiA0LjgzMyw3LjA3OSAJCSIvPgoJCTxwb2x5Z29u%0D%0AIHN0eWxlPSJmaWxsOiMwMzAxMDQ7IiBwb2ludHM9IjkuMTY3LDcuMDc5IDE0LDExLjE4NiAxNCwy%0D%0ALjg3NSAJCSIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+%0D%0ACjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjxn%0D%0APgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+    border-radius: 5px;
+}
+.form-email button {
+    display: block;
+    margin-top: 15px;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    width: 100px;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+.form-email h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media screen and (max-width:1024px) {
+
+}
+@media screen and (max-width:768px) {
+    
+}
+@media screen and (max-width:480px) {
+
+}
+@media screen and (max-width:320px) {
+
+}
