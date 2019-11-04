@@ -19,6 +19,8 @@ body header div{
 }
 .logo {
     vertical-align: middle;
+    margin-block-start: 0;
+    padding-top: 20px;
 }
 /* selector descendente: */
 body header div nav ol {
@@ -86,37 +88,44 @@ h2{
     margin-bottom: 15px;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-between;
 }
 .project-textContainer{
-    max-width: 1000px;
-    width: 100%;
+    /* max-width: 1000px; */
+    width: 50%;
+    font-size: 32px;
     /* margin: 10px auto; auto sirve para centrar las cosas, porque abarca el máximo que puede de cada lado*/
     /* arriba abajo - derecha izq */
 }
 .project-title{
-    font-size: 30px;
+    font-size: 2em;
     margin: 10px 0;
     margin-bottom: 10px;
     margin-top: 0;
 }
 .project-course, .project-url, .project-date {
     margin: 10px 0;
+    font-size: 1em;
 }
 .project-description {
-    font-size: 20px;
+    font-size: .8em;
 }
 .project strong {
     font-family: 'Fjalla One', sans-serif;
 }
 .project-imageContainer{
-    max-width: 1000px;
-    width: 100%;
+    /* max-width: 1000px; */
+    width: 50%;
+    text-align: center;
+}
+.project-image {
+    width: 100%
 }
 .hero{
-    height: 200px;
+    height: auto;
+    max-height: 200px;
     /* background-image: url(../images/tildeverdeSAP.png); */
     /* background-repeat: no-repeat;
     background-position-x: right;
@@ -127,6 +136,9 @@ h2{
     align-items: center;
     padding: 0 20px;
     justify-content: space-between;
+}
+.hero img {
+    width: 200px;
 }
 .footer {
     background-color: #202031;
@@ -161,8 +173,9 @@ h2{
 }
 .experience {
     /* border: 1px solid red; */
-    margin: 10px;
-    width: 480px;
+    margin: 2%;
+    width: 46%;
+    max-width: 480px;
     border-radius: 4px;
     overflow: hidden;
     /* CON OVERFLOW, TODO LO QUE SALE DEL LUGAR SE ESCONDE */
@@ -256,31 +269,173 @@ h2{
 .form-email h3 {
     font-family: 'Source Sans Pro', sans-serif;
 }
+.video {
+    width: 100%;
+    height: auto;
+    /* ESTO ES PARA QUE EL VIDEO OCUPE EL MÁXIMO LUGAR POSIBLE */
+}
+.youtube {
+    /* (alto * 100) / ancho = me da un porcentaje para aplicarle un padding - en el ejemplo me dió 56.25*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.videoContainer {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* ESTE ES EL PADDING QUE CALCULÉ CON EL ALTO Y ANCHO DEL VIDEO */
+    position: relative;
+}
+.icon-menu-burguer-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    line-height: 66px; /*PARA QUE QUEDE CENTRADO LE TENGO QUE PONER LA MISMA ALTURA QUE TIENE EL CONTENEDOR*/
+    text-align: center; 
+    position: fixed;
+    z-index: 5;
+    left: 5px;
+    top: 40px;
+}
 
 @media screen and (max-width:1024px) {
 
 }
 @media screen and (max-width:767px) {
-  .header{
+    .header{
     display: block;
     height: auto;
   }
   .header ol {
     display: block;
+    text-align: center;
+    padding-left: -40px;
+  }
+  body header div {
+      display: block;
   }
   .header ol li {
     height: 50px;
   }
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    margin-bottom: 1em;
   }
   .logo {
     text-align: center;
+    padding-left: 40px;
   }
+  .hero{
+    max-height: none;
+    display: block;
+    text-align: center;
+    flex-wrap: unset;
+    margin-top: -1.5em;
+    padding: 1em 1.5em;
+    position: relative;
+    background-image: url(../images/fondo.png);
+    /* overflow: auto; ES PARA CUANDO SOBRA IMÁGEN DEL LUGAR QUE CORRESPONDE Y QUERES QUE SE AJUSTE */
+    }
+    .hero img {
+        display: none;
+        /* position: absolute; */
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    h1 {
+        /* position: absolute; */
+        /* font-size: 2em; */
+        z-index: 1;
+    }
+  .project {
+      display: block;
+  }
+  .project-imageContainer {
+      width: auto;
+  }
+  .project-textContainer{
+    width: auto;
+    font-size: 16px;
+  }
+  .project-course, .project-url, .project-date {
+    margin: .3em 0;
+    }
+    .project-title {
+        margin-bottom: .3em;
+    }
+    .experience {
+        width: auto;
+        max-width: 480px;
+        flex-shrink: initial;
+    }
+    .experience img {
+        width: 100%;
+    }
+    .experience-details {
+        margin: -2em .5em .5em .5em;
+        padding: 1em;
+    }
+    .contact {
+        height: auto;
+        display: block;
+        /* flex-wrap: wrap; */
+        text-align: center;
+        /* justify-content: space-between; */
+        padding: 1.5em 0;
+    }
+    .form-email button {
+    margin: 1em auto; /* CON MARGIN: 0 AUTO LO ACOMODO EN EL MEDIO DE LA PAGINA */
+    }
+    .form-email h3 {
+        margin-top: 0;
+    }
+    .footer {
+        align-items: center;
+        font-size: 12px;
+    }
+    .icon-menu-burguer-button {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        background: rgba(0, 36.52, 106.4, .85);
+        z-index: 4;
+        top: 0;
+        left: 100vw;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+    .menu.is-active {
+        left: 0;
+    }
 }
 @media screen and (max-width:480px) {
-
+    .project-textContainer{
+        width: auto;
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 2.1em;
+    }
 }
 @media screen and (max-width:320px) {
-
+    h1 {
+        font-size: 1.4em;
+        background: rgba(0, 0, 0, .2) /*ESTO ES PARA PONERLE UN FONDO GRIS TRANSPARENTE AL TEXTO */
+    }
 }

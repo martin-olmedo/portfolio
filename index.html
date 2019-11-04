@@ -26,7 +26,7 @@
                         <a class="link" href="#portafolio">Portafolio</a>
                     </li>
                     <li>
-                        <a class="link" href="#experiencia">Experiencia</a>
+                        <a class="link" href="#experiencia-titulo">Experiencia</a>
                     </li>
                     <li>
                         <a class="link" href="#contacto">Trabajemos juntos</a>
@@ -35,10 +35,23 @@
             </nav>
         </div>
     </header>
-    <!-- <section class="hero">
+    <i class="icon-menu-burguer-button" id="burguer">
+        <img src="https://img.icons8.com/ios-filled/50/000000/menu.png" height="30px" width="30px">
+    </i>
+    <section class="hero">
         <h1>Hola! Soy <strong>Martin Olmedo</strong>,<br/>desarrollador <strong>JavaScript</strong> con <br>pasión por el <strong>aprendizaje</strong></h1>
-        <img src="images/fondo.png" alt="imágen de portada" width="200px">
+        <img src="images/fondo.png" alt="imágen de portada">
     </section>
+    <!-- LO SIGUIENTE ES PARA PONER VIDEOS (lo dejo comentado porque no tengo videos):
+    <video class="video" src="videos/video.mp4" controls></video>
+    ESTO EXPORTA EL VIDEO DIRECTO A LA PAGINA. PARA PODER PONERLE PLAY HAY QUE PONERLE EL ATRIBUTO CONTROLS, NO SE USA MÁS AUTOPLAY EN LOS NAVEGADORES 
+    PARA PONER UN VIDEO DIRECTAMENTE DE YOUTUBE CON SU PLATAFORMA, SE USA LA ETIQUETA IFRAME
+    <div class="videoContainer">
+        <iframe class="youtube" src="http://www.youtube.com" frameborder="0"></iframe>
+    </div>
+    VER .CSS PARA VER CÓMO SE INTEGRA EN LA PAGINA.
+    TAMBIEN SIRVE PARA INSERTAR UNA PAGINA ADENTRO DE MI PÁGINA. ES COMO TENERLA CHIQUITA EN UN COSTADO (CON EL TAMAÑO QUE YO QUIERA)
+    -->
     <section id="portafolio" class="portfolio">
         <h2>Portafolio (proyectos destacados)</h2>
         <article class="project">
@@ -50,7 +63,7 @@
                 <p class="project-description">Simón Dice fue el resultado de varios días de trabajo gracias a un curso de programación donde incluye cuestiones tanto front end como back end.</p>
             </div>
             <figure class="project-imageContainer">
-                <img class="project-image" src="images/simon.png" alt="imagen de Simon Dice">
+                <img class="project-image" width="400px" src="images/simon.png" alt="imagen de Simon Dice">
             </figure>
         </article>
         <article class="project">
@@ -66,7 +79,7 @@
             </figure>
         </article>
     </section>
-    <h2 class="experience-list-title">Más sobre mi experiencia</h2>
+    <h2 class="experience-list-title" id="experiencia-titulo">Más sobre mi experiencia</h2>
     <section id="experiencia" class="experience-list">
         <article class="experience">
             <figure class="experience-imageContainer">
@@ -107,6 +120,28 @@
             <p>Hecho con el Curso de desarrollo web online de <a href="http://www.platzi.com"><img src="https://cdnwp.runahr.com/wp-content/uploads/2018/09/logo_gris.png" alt="logo_platzi" height="20px"></a></p>
         </div>
         <!-- <div> <p>Designed by <a href="http://twitter.com/thespianartist">@thespianartist</a></p>  </div> -->
-    </footer> -->
+    </footer>
+    <script>
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const menu = document.querySelector('.menu')
+        const burguer = document.querySelector('#burguer')
+        ipad.addListener(validation)
+        function activa() {
+            if(menu.classList.contains('is-active')){
+                menu.classList.remove('is-active')
+            } else {
+                menu.classList.add('is-active')
+            }
+        }
+        function validation(event) {
+            if (event.matches) {
+                burguer.addEventListener('click', activa)
+                menu.addEventListener('click', activa)
+            } else {
+                burguer.removeEventListener('click', activa)
+                menu.removeEventListener('click', activa)
+            }
+        }
+    </script>
 </body>
 </html>
